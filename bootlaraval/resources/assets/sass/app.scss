@@ -1,6 +1,10 @@
 
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import "fontawesome/fontawesome.scss";
+@import "fontawesome/fa-brands.scss";
+@import "fontawesome/fa-regular.scss";
+@import "fontawesome/fa-solid.scss";
 
 // Variables
 @import "variables";
@@ -9,6 +13,5 @@
 @import '~bootstrap/scss/bootstrap';
 
 .navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  background-color: $bg-bright;
 }
