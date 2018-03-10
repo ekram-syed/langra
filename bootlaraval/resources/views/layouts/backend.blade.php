@@ -35,122 +35,146 @@
 
 <body>
     <header id="header" class="pt-5 mt-2">
-        <nav class="navbar navbar-expand-md bg-bright fixed-top navbar-light border-bottom">
-            <div class="container">
-                <a class="navbar-brand " href="{{ url('/') }}">
-                    <i class="fas fa-leaf text-success"></i> {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        <nav class="navbar navbar-expand-md bg-bright navbar-laravel fixed-top navbar-light border-bottom">
+            <a class="navbar-brand " href="{{ url('/') }}">
+                <i class="fas fa-leaf text-success"></i> {{ config('app.name', 'Laravel') }}
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <div class="collapse navbar-collapse justify-content-end" id="navbarToggleContent">
-                    <ul class="navbar-nav">
-                        <!-- Authentication Links -->
-                        @guest
-                        <li>
-                            <a class="nav-link btn btn-outline-success mx-1" href="{{ route('login') }}">
-                                <i class="fas fa-user-plus"></i>{{ __('Signin') }}</a>
-                        </li>
-                        <li>
-                            <a class="nav-link btn btn-outline-primary" href="{{ route('register') }}">
-                                <i class="fas fa-sign-in-alt"></i>{{ __('Signup') }}</a>
-                        </li>
-                        @else
-                        <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }}
-                                <span class="caret"></span>
-                            </a>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarToggleContent">
+                <ul class="navbar-nav">
 
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    @guest
+                    <li>
+                        <a class="nav-link btn btn-outline-success mx-1" href="{{ route('login') }}">
+                            <i class="fas fa-user-plus"></i>{{ __('Signin') }}</a>
+                    </li>
+                    <li>
+                        <a class="nav-link btn btn-outline-primary" href="{{ route('register') }}">
+                            <i class="fas fa-sign-in-alt"></i>{{ __('Signup') }}</a>
+                    </li>
+                    @else
+                    <li class="nav-item text-uppercase dropdown">
+                        <i class="fas fa-user"></i>
+                        <a id="navbarDropdown" class=" dropdown-toggle text-capitalize" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false" v-pre>
+                            {{ Auth::user()->name }}
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                       document.getElementById('logout-form').submit();">
-                                    <i class="fas fa-sign-out-alt"></i>{{ __('Logout') }}
+                                            document.getElementById('logout-form').submit();">
+                                    <i class="fas fa-fw fa-sign-out-alt"></i> {{ __('Logout') }}
                                 </a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                     @csrf
                                 </form>
-                            </div>
-                        </li>
-                        @endguest
-                    </ul>
-                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    @endguest
+                </ul>
             </div>
         </nav>
     </header>
 
     <main>
-        @yield('content')
+        <div class="container-fluid">
+            <div class="row py-4">
+                <nav class="col-md-2 border-right">
+                    <h6 class="dropdown-header pl-0 border-bottom text-uppercase">Browse</h6>
+                    <ul class="nav flex-column">
+                        <li class="nav-item text-uppercase">
+                            <a class="nav-link active" href="#">
+                                <i class="fab fa-fw mr-1 text-secondary fa-windows"></i> Dashboard
+                            </a>
+                        </li>
+                    </ul>
+                    <h6 class="dropdown-header pl-0 border-bottom text-uppercase">Manage</h6>
+                    <ul class="nav flex-column">
+                        <li class="nav-item text-uppercase">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-fw mr-1 text-secondary fa-user"></i>
+                                Profile
+                            </a>
+                        </li>
+                        <li class="nav-item text-uppercase">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-fw mr-1 text-secondary fa-calendar-check"></i>
+                                Schedular
+                            </a>
+                        </li>
+                        <li class="nav-item text-uppercase">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-fw mr-1 text-secondary fa-cogs"></i>
+                                Preference
+                            </a>
+                        </li>
+                        <li class="nav-item text-uppercase">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-fw mr-1 text-secondary fa-users"></i>
+                                Clients
+                            </a>
+                        </li>
+                        <li class="nav-item text-uppercase">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-fw mr-1 text-secondary fa-credit-card"></i>
+                                Billing
+                            </a>
+                        </li>
+                        <li class="nav-item text-uppercase">
+                            <a class="nav-link" href="reports.html">
+                                <i class="fas fa-fw mr-1 text-secondary fa-clipboard"></i>
+                                Reports
+                            </a>
+                        </li>
+                    </ul>
+                    <h6 class="dropdown-header pl-0 border-bottom text-uppercase">App Admin</h6>
+                    <ul class="nav flex-column">
+                        <li class="nav-item text-uppercase">
+                            <a class="nav-link active" href="#">
+                                <i class="fas fa-fw mr-1 text-secondary fa-list"></i> Categories
+                            </a>
+                        </li>
+                        <li class="nav-item text-uppercase">
+                            <a class="nav-link active" href="#">
+                                <i class="fas fa-fw mr-1 text-secondary fa-users"></i> Users
+                            </a>
+                        </li>
+                        <li class="nav-item text-uppercase">
+                            <a class="nav-link" href="#">
+                                <i class="fab fa-fw mr-1 text-secondary fa-connectdevelop"></i>
+                                Integrations
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <main role="main" class="col-md-10 pt-4">
+                    <div class="row my-2">
+                        @yield('content')
+                    </div>
+                </main>
+            </div>
+        </div>
     </main>
 
 
     <footer id="footer">
-        <div class="container border-top py-3 mt-5">
+        <div class="container-fluid border-top py-3">
             <div class="row justify-content-between">
                 <div class="col-md-3">
                     <a class="navbar-brand " href="#">
                         <i class="fas fa-leaf text-muted"></i>
                         <span class="text-muted">{{ config('app.name', 'Laravel') }}</span>
                     </a>
-                    <small class="blockquote-footer">&copy; 2018 MetaActs Inc.</small>
                 </div>
-                <div class="col-md-3">
-                    <h6>Company</h6>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="about.html">About</a>
-                        </li>
-                        <li>
-                            <a href="about.html">Terms of Service</a>
-                        </li>
-                        <li>
-                            <a href="about.html">Privacy Policy</a>
-                        </li>
-                        <li>
-                            <a href="about.html">Trust &amp; Safety</a>
-                        </li>
-                        <li>
-                            <a href="about.html">Careers</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h6>Support</h6>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="about.html">Contact Support</a>
-                        </li>
-                        <li>
-                            <a href="about.html">User Handbook</a>
-                        </li>
-                        <li>
-                            <a href="about.html">Provider Handbook</a>
-                        </li>
-                        <li>
-                            <a href="about.html">How to Guide</a>
-                        </li>
-                        <li>
-                            <a href="about.html">Blog</a>
-                        </li>
-                        <li>
-                            <a href="about.html">Forum</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h6>Explore</h6>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="about.html">Experts by Skill</a>
-                        </li>
-                        <li>
-                            <a href="about.html">Topics</a>
-                        </li>
-                    </ul>
+                <div class="col-md-3 text-right align-self-center">
+                    <small class="blockquote-footer">&copy; 2018 {{ config('app.name', 'Laravel') }} Inc.</small>
                 </div>
             </div>
         </div>

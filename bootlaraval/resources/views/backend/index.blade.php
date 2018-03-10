@@ -1,1 +1,1 @@
-@extends('layouts.frontend') @section('content') @endsection
+@extends('layouts.backend') @section('content') @endsection
