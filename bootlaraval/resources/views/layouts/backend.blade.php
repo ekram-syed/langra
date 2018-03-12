@@ -90,7 +90,12 @@
                     <ul class="nav flex-column">
                         <li class="nav-item text-uppercase">
                             <a class="nav-link active" href="#">
-                                <i class="fab fa-fw mr-1 text-secondary fa-windows"></i> Dashboard
+                                <i class="fab fa-fw mr-1 text-secondary fa-windows"></i> by categories
+                            </a>
+                        </li>
+                        <li class="nav-item text-uppercase">
+                            <a class="nav-link active" href="#">
+                                <i class="fab fa-fw mr-1 text-secondary fa-windows"></i> by experts
                             </a>
                         </li>
                     </ul>
