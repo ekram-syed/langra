@@ -5,17 +5,17 @@
             <i class="fas fa-sign-in-alt"></i> Signin
         </h1>
         <div class="row justify-content-center">
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <h3 class="lead">Quick & Easy</h3>
-                <button class="btn  btn-outline-primary btn-block text-left" type="submit">
-                    <i class="fab fa-google-plus-square"></i> SignIn with Google</button>
-                <button class="btn  btn-outline-primary btn-block  text-left" type="submit">
-                    <i class="fab fa-facebook-square"></i> SignIn with Facebook</button>
-                <button class="btn  btn-outline-primary btn-block  text-left" type="submit">
-                    <i class="fab fa-linkedin"></i> SignIn with Linkedin</button>
+                <button class="btn  btn-outline-secondary btn-block text-left" type="submit">
+                    <i class="fab fa-fw fa-google-plus-square"></i> SignIn with Google</button>
+                <button class="btn btn-outline-secondary btn-block  text-left" type="submit">
+                    <i class="fab fa-fw fa-facebook-square"></i> SignIn with Facebook</button>
+                <button class="btn  btn-outline-secondary btn-block  text-left" type="submit">
+                    <i class="fab fa-fw fa-linkedin"></i> SignIn with Linkedin</button>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <h3 class="lead">Use Email & Password</h3>
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
@@ -61,10 +61,10 @@
                 </form>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <h3 class="lead">First time here? SignUp</h3>
-                <button class="btn  btn-outline-success btn-block" type="submit">
-                    <i class="fas fa-user-plus"></i> SignUp</button>
+                <a href="/register" class="btn  btn-outline-success btn-block">
+                    <i class="fas fa-user-plus"></i> SignUp</a>
                 <hr>
                 <h3 class="lead">Forget credentials?</h3>
                 <a class="btn btn-outline-dark btn-block" href="{{ route('password.request') }}">

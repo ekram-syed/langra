@@ -18,3 +18,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/user', 'UserController@index')->name('backend');
+Route::get('/admin', 'AdminController@index');
+Route::get('/admin/users', 'AdminController@userlist');

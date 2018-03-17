@@ -6,17 +6,17 @@
             <i class="fas fa-user-plus"></i> {{ __('Signup') }}
         </h1>
         <div class="row justify-content-center">
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <h3 class="lead">{{ __('Quick & Easy') }}</h3>
-                <button class="btn  btn-outline-primary btn-block text-left" type="submit">
-                    <i class="fab fa-google-plus-square"></i> SignUn with Google</button>
-                <button class="btn  btn-outline-primary btn-block  text-left" type="submit">
-                    <i class="fab fa-facebook-square"></i> SignUn with Facebook</button>
-                <button class="btn  btn-outline-primary btn-block  text-left" type="submit">
-                    <i class="fab fa-linkedin"></i> SignUn with Linkedin</button>
+                <button class="btn  btn-outline-secondary btn-block text-left" type="submit">
+                    <i class="fab fa-fw fa-google-plus-square"></i> SignUn with Google</button>
+                <button class="btn  btn-outline-secondary btn-block  text-left" type="submit">
+                    <i class="fab fa-fw fa-facebook-square"></i> SignUn with Facebook</button>
+                <button class="btn  btn-outline-secondary btn-block  text-left" type="submit">
+                    <i class="fab fa-fw fa-linkedin"></i> SignUn with Linkedin</button>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <h3 class="lead">{{ __('Use our Register') }}</h3>
                 <form class="form-signin" method="POST" action="{{ route('register') }}">
                     @csrf
@@ -85,14 +85,14 @@
                 </form>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <h3 class="lead">{{ __('Returning User? Just SignIn') }}</h3>
                 <button class="btn  btn-outline-primary btn-block" type="submit">
                     <i class="fas fa-sign-in-alt"></i> {{ __('Signin') }}</button>
                 <hr>
                 <h3 class="lead">{{ __('Forget credentials?') }}</h3>
-                <button class="btn  btn-outline-dark btn-block" type="submit">
-                    <i class="fas fa-retweet"></i> {{ __('Request & Reset') }}</button>
+                <a href="/password/reset" class="btn  btn-outline-dark btn-block">
+                    <i class="fas fa-retweet"></i> {{ __('Request & Reset') }}</a>
             </div>
 
         </div>

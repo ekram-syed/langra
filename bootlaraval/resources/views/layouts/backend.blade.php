@@ -141,12 +141,12 @@
                     <h6 class="dropdown-header pl-0 border-bottom text-uppercase">App Admin</h6>
                     <ul class="nav flex-column">
                         <li class="nav-item text-uppercase">
-                            <a class="nav-link active" href="#">
+                            <a class="nav-link active" href="/admin/categories">
                                 <i class="fas fa-fw mr-1 text-secondary fa-list"></i> Categories
                             </a>
                         </li>
                         <li class="nav-item text-uppercase">
-                            <a class="nav-link active" href="#">
+                            <a class="nav-link active" href="/admin/users">
                                 <i class="fas fa-fw mr-1 text-secondary fa-users"></i> Users
                             </a>
                         </li>
@@ -160,9 +160,7 @@
                 </nav>
 
                 <main role="main" class="col-md-10 pt-4">
-                    <div class="row my-2">
-                        @yield('content')
-                    </div>
+                    @yield('content')
                 </main>
             </div>
         </div>
