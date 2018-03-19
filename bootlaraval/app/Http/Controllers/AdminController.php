@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\User;
 
 class AdminController extends Controller
 {
@@ -19,7 +20,7 @@ class AdminController extends Controller
 
     public function userlist() 
     {
-        //$users = User::
-        return view('admin.userlist');
+        $users = User::all();
+        return view('admin.userlist')->with('data', $users);
     }
 }
