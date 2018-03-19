@@ -355,6 +355,7 @@ class ComposerStaticInitca9918f84702609ee67422f6edccb3e8
     );
 
     public static $classMap = array (
+        'App\\AppSettings' => __DIR__ . '/../..' . '/app/AppSettings.php',
         'App\\Category' => __DIR__ . '/../..' . '/app/Category.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
@@ -378,6 +379,11 @@ class ComposerStaticInitca9918f84702609ee67422f6edccb3e8
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
+        'App\\UserCertifination' => __DIR__ . '/../..' . '/app/UserCertifination.php',
+        'App\\UserEducation' => __DIR__ . '/../..' . '/app/UserEducation.php',
+        'App\\UserExperience' => __DIR__ . '/../..' . '/app/UserExperience.php',
+        'App\\UserPortfolio' => __DIR__ . '/../..' . '/app/UserPortfolio.php',
+        'App\\UserSettings' => __DIR__ . '/../..' . '/app/UserSettings.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
