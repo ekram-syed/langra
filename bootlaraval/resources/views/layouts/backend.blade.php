@@ -87,7 +87,7 @@
             <div class="row py-4">
                 <nav class="col-md-2 border-right">
                     <h6 class="dropdown-header pl-0 border-bottom text-uppercase">Browse</h6>
-                    <ul class="nav flex-column">
+                    <ul class="nav flex-column mb-2">
                         <li class="nav-item text-uppercase">
                             <a class="nav-link active" href="#">
                                 <i class="fab fa-fw mr-1 text-secondary fa-windows"></i> by categories
@@ -100,7 +100,7 @@
                         </li>
                     </ul>
                     <h6 class="dropdown-header pl-0 border-bottom text-uppercase">Manage</h6>
-                    <ul class="nav flex-column">
+                    <ul class="nav flex-column mb-2">
                         <li class="nav-item text-uppercase">
                             <a class="nav-link" href="#">
                                 <i class="fas fa-fw mr-1 text-secondary fa-user"></i>
@@ -139,7 +139,7 @@
                         </li>
                     </ul>
                     <h6 class="dropdown-header pl-0 border-bottom text-uppercase">App Admin</h6>
-                    <ul class="nav flex-column">
+                    <ul class="nav flex-column mb-2">
                         <li class="nav-item text-uppercase">
                             <a class="nav-link active" href="/admin/categories">
                                 <i class="fas fa-fw mr-1 text-secondary fa-list"></i> Categories
@@ -159,9 +159,9 @@
                     </ul>
                 </nav>
 
-                <main role="main" class="col-md-10 pt-4">
+                <section class="col-md-10">
                     @yield('content')
-                </main>
+                </section>
             </div>
         </div>
     </main>
